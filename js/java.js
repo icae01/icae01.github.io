@@ -1,10 +1,13 @@
-$(document).ready(function() {
-	setInterval(function() {
-		$(".main").css("padding-top", $(".navegador").css("height"))
-		$(".main").css("height", window.innerHeight)
-	}, 1)
+$(window).resize(function() {
+	$(".main").css("padding-top", $(".navegador").css("height"));
 })
 
+// General
+$(document).ready(function () {
+	$(".main").css("padding-top", $(".navegador").css("height"));
+});
+
+// Funcion Slider
 $(document).ready(function() {
 	var imgItem = $(".slider li").length;
 	var	imgPos = 1;
@@ -73,5 +76,5 @@ $(document).ready(function() {
 	setInterval(function() {
 		nextPag()
 	}, 10000);
-})
+});
 

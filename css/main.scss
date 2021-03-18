@@ -32,10 +32,8 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-thumb{
-    background: $base;
-    border-radius: 4px;
-    border-left: 2px solid #fff;
-	border-right: 2px solid #fff;
+    background: darken($base, 10);
+    // border-radius: 4px;
 }
 
 *::selection{
@@ -103,7 +101,7 @@ hr{
 		}
 
 		h1{
-			font-size: 2.5em;
+			font-size: 2em;
 		}
 
 		.menu{
@@ -214,7 +212,8 @@ hr{
 	height: 100vh;
 
 	background: url(img/img-center-def.jpg);
-	background-size: 100% 100%;
+	background-size: 100% 120%;
+	background-position: 0 -100px;
 	background-attachment: fixed;
 
 	display: flex;
@@ -253,9 +252,11 @@ hr{
 
 		.slider{
 			height: 80%;
-			background: rgba(#000, .25);
+			background: radial-gradient(
+				rgba(0, 0, 0, .8),
+				transparent
+			);
 			box-shadow: inset 0px -50px 80px -10px black;
-			padding: 30px 40px 70px;
 			list-style: none;
 			position: relative;
 
@@ -264,8 +265,9 @@ hr{
 			justify-content: center;
 			align-items: center;
 
-			li{
-				padding: 0 50px;
+			>li{
+				width: 80%;
+				padding: 15px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -777,18 +779,17 @@ img.img-faded{
 					font-family: "Bree serif";
 
 					.contenido{
-						ol{
-							list-style-position: inside;
+						p{
 							margin: 5px 0;
-							text-align: left;
-
-							li{
-								margin: 2px 0;
+							&.p-title{
+								font-size: 1.15em;
 							}
 						}
 
-						p{
-							margin: 5px 0;
+						ol{
+							margin: 10px 0;
+							padding: 0 20px;
+							text-align: left;
 						}
 					}
 				}

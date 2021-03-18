@@ -25,19 +25,6 @@
 			}
 		}
 	}
-	
-	.box{
-		.caja-tarjetas{
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			align-items: center;
-
-			.tarjeta-wrap{
-				width: 85%;
-			}
-		}
-	}
 		
 	.main{
 		.descript{
@@ -73,6 +60,18 @@
 		}
 	}
 
+	.box{
+		.caja-tarjetas{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+			.tarjeta-wrap{
+				// width: 400;
+			}
+		}
+	}
 	footer{
 		.box.pos{
 			p{

@@ -765,42 +765,50 @@ h2.titulo-hr::after, h2.titulo-hr::before {
 
 #celulas.adelante {
   background: url("img/otros/celulas.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: auto 110%;
 }
 
 #liderazgo.adelante {
   background: url("img/otros/liderazgo.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: auto 110%;
 }
 
 #adoracion.adelante {
   background: url("img/otros/musical.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: auto 110%;
 }
 
 #multimedia.adelante {
   background: url("img/otros/multimedia.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: auto 110%;
 }
 
 #eventos.adelante {
   background: url("img/otros/eventos.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: auto 110%;
 }
 
 #sedes.adelante {
   background: url("img/otros/sedes.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: 110% auto;
 }
 
 #radio.adelante {
   background: url("img/otros/radio.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: auto 110%;
 }
 
 #danza.adelante {
   background: url("img/otros/danzas.jpg");
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: auto 110%;
 }
 
 .cuadro-tarjeta .tarjeta > .atras .contenido p {

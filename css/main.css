@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 *::selection {
-  background: rgba(9, 67, 104, 0.82);
+  background: rgba(9, 67, 104, 0.8);
   color: #fff;
 }
 

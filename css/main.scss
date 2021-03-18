@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 *::selection{
-	background: rgba(9, 67, 104, 0.82);
+	background: rgba(9, 67, 104, 0.8);
 	color: #fff;
 }
 
@@ -218,7 +218,7 @@ hr{
 	background-attachment: fixed;
 
 	display: flex;
-	flex-flow: row wrap ;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 

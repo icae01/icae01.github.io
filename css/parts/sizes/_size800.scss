@@ -1,0 +1,88 @@
+	.navegador{
+		.logo{
+			h1{
+				font-size: 2.2em;
+			}
+
+			.menu{
+				width: 95%;
+
+				> li {
+					padding: 15px 20px;
+
+					.sub-menu{
+						font-size: .8em;
+
+						li:hover{
+							box-shadow: inset 200px 0px 0 $base-dk;
+						}
+					}
+				}
+
+				a{
+					font-size: .85em;
+				}
+			}
+		}
+	}
+	
+	.box{
+		.caja-tarjetas{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+			.tarjeta-wrap{
+				width: 85%;
+			}
+		}
+	}
+		
+	.main{
+		.descript{
+			h1{
+				font-size: 1.7em;
+			}
+		}
+
+		.cuadro-descrip{
+			.slider{
+				li{
+					h1{
+						font-size: 1.7em;
+					}
+
+					p{
+						width: 100%;
+						font-size: .8em;
+					}
+
+					a{
+						font-size: .8em;
+					}
+				}
+			}
+		}
+	}
+
+
+	article.contenido .box-description{ 
+		.box-wrap{
+			width: 100%;
+		}
+	}
+
+	footer{
+		.box.pos{
+			p{
+				font-size: .9em;
+			}
+		}
+
+		.box.redes{
+			.items-redes{
+				width: 80%;
+			}
+		}
+	}

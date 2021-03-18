@@ -1,0 +1,787 @@
+$base-dk: #072A41
+$base: #0A3B5B
+$base-md: #0B4368
+$base-md-lg: #126DA7
+$base-lg: #1996E7
+
+$black: #222
+
+
+*
+	margin: 0
+	padding: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	transition: all 0.3s ease
+
+
+html
+	scroll-behavior: smooth
+
+@font-face
+	font-family: "Roboto Slab"
+	src: url("../font/Roboto Slab/RobotoSlab-Bold.ttf")
+
+@font-face
+	font-family: "Bree Serif"
+	src: url("../font/Bree_Serif/BreeSerif-Regular.ttf")
+
+@font-face
+	font-family: "Google sans"
+	src: url("../font/Google Sans/Google-sans.woff2")
+
+
+body
+	background: #ddd
+	font-family: Roboto Slab
+	overflow-x: hidden
+
+
+body::-webkit-scrollbar
+    width: 10px
+    background: #fff
+
+
+body::-webkit-scrollbar-thumb
+    background: $base
+    border-radius: 4px
+    border-left: 2px solid #ddd
+    border-right: 2px solid #ddd
+
+*::selection
+	background: rgba(9, 67, 104, 0.82)
+	color: #fff
+
+h1
+	font-size: 2em
+	color: $base
+
+h2
+	font-size: 2em
+	
+b
+	font-weight: 800
+
+p
+	font-family: "Bree Serif"
+
+hr
+	width: 80%
+	border: 2px solid $base
+	margin: 10px auto
+	border-radius: 5px
+
+/* I Parte - Navegador */
+.navegador
+	width: 100%
+	height: auto
+	z-index: 1000
+	position: fixed
+	top: 0
+	clear: both
+
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+
+	.logo
+		width: 100%
+		padding: 8px 30px
+		text-align: center
+		background: #fff
+		font-size: .8em
+		position: relative
+		z-index: 5
+		
+		box-shadow: 1px 1px 15px -8px #000
+
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		&:hover > .menu
+			opacity: 1
+			top: 100%
+
+		h1
+			font-size: 2.5em
+
+		.menu
+			width: 80%
+			background: rgba(#fff,.9)
+			box-shadow: 1px 1px 15px -8px #000
+			border-bottom-right-radius: 3px
+			border-bottom-left-radius: 3px
+			position: absolute
+			top: 0
+
+			display: flex
+			flex-direction: row
+			flex-wrap: nowrap
+			justify-content: space-around
+			opacity: 0
+
+			> li
+				width: 100%
+				padding: 12px
+				border: 1px solid rgba($base, 0.1)
+				border-top: none
+				border-bottom: none
+				position: relative
+
+				font-size: 1.08em
+				font-weight: 700
+				text-align: center
+				
+				display: flex
+				justify-content: center
+				align-items: center
+
+				&:hover
+					background: darken($base-md-lg, 5%)
+
+					a
+						color: #fff
+
+
+				a
+					width: 100%
+					margin: 0 5px
+					cursor: pointer
+					text-decoration: none
+					color: $base
+					display: inline-block
+
+
+.navegador .logo > .menu li ul.sub-menu
+	min-width: 100%
+	max-width: 200%
+	border-bottom-right-radius: 3px
+	border-bottom-left-radius: 3px
+
+	position: absolute
+	top: 100%
+
+	list-style: none
+	background: $base-md
+	visibility: hidden
+	opacity: 0
+
+	>li
+		padding: 13px
+		font-family: "Bree serif"
+
+		&:hover
+			background: $base-dk
+
+			a
+				color: #ccc
+				
+		a
+			font-size: 1em
+
+
+
+
+.navegador .logo > .menu li:hover ul.sub-menu
+	visibility: visible
+	opacity: 1
+
+
+.navegador .logo > .menu li:last-child
+	border-right: none
+	border-bottom-right-radius: 3px
+
+
+.navegador .logo > .menu li:first-child
+	border-left: none
+	border-bottom-left-radius: 3px
+
+
+.navegador .logo > .menu > li i
+	margin: 0 8px
+
+
+/* II Parte - Main - Pantalla Central */
+
+.main
+	width: 100%
+	height: 100vh
+
+	background: url(img/img-center-def.jpg)
+	background-size: 100% 100%
+	background-attachment: fixed
+
+	display: flex
+	flex-flow: row wrap 
+	justify-content: center
+	align-items: center
+
+	.cuadro-descrip
+		width: 100%
+		height: 100%
+		color: #fff
+		text-align: center
+
+		.box-display
+			height: 20%
+			background: $base
+			padding: 10px
+			font-size: .85em
+			position: relative
+
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			h1
+				color: #fff
+				z-index: 2
+
+			img
+				width: auto
+				height: 70%
+
+
+		.slider
+			height: 80%
+			background: rgba(#000, .25)
+			box-shadow: inset 0px -50px 80px -10px black
+			padding: 30px 40px 70px
+			list-style: none
+			position: relative
+
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			li
+				padding: 0 50px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+
+				h1
+					color: #fff
+					font-size: 2em
+			
+				p
+					width: 70%
+					font-size: 1em
+					font-family: "Bree Serif"
+
+				a
+					display: inline-block
+					margin-top: 30px
+					padding: 10px 20px
+					border-radius: 3px
+					background: #fff
+
+					color: $base
+					font-size: .85em
+					font-weight: 700
+					text-decoration: none
+
+					&:hover
+						background: #eee
+			
+			.left, .right
+				position: absolute	
+				top: 0
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 1em
+				color: #fff
+				z-index: 100
+				cursor: pointer
+
+			.left
+				left: 10px
+
+			.right
+				right: 10px
+
+			.selectores
+				position: absolute
+				bottom: 20px
+				width: 100%
+				padding: 15px
+				border-radius: 3px
+
+				display: flex
+				flex-direction: row
+				justify-content: center
+				list-style: none
+
+				span
+					cursor: pointer
+		
+		.descript
+			height: 80%
+			background: #eee
+			box-shadow: 1px 1px 15px -8px #000
+			position: relative
+			color: $base
+
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			h1
+				font-size: 1.9em
+		
+			p
+				width: 60%
+				font-size: .9em
+				color: inherit
+				font-family: "Bree Serif"
+
+			a
+				display: inline-block
+				margin-top: 30px
+				padding: 10px 20px
+				background: $base
+				border-radius: 3px
+				color: #fff
+
+				font-size: .8em
+				font-weight: 700
+				text-decoration: none
+
+
+				&:hover
+					background: rgba($base, .5)
+
+.box-border
+	padding: 20px
+	background: $base
+	border-radius: 50%
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+
+	span
+		position: absolute
+
+
+/* III Parte - Contenido */
+	
+article.contenido
+	width: 100%
+	height: auto
+
+	.cuadro
+		width: 100%
+		height: auto
+		padding: 10% 0
+		margin: auto
+		background: $base
+
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		img
+			width: auto
+			height: 70%
+
+	.box-description
+		width: 100%
+		height: auto
+		padding: 30px 0
+		position: relative
+		
+		.titulo
+			width: 100%
+			height: 30%
+			padding: 20px 30px
+			box-shadow: 1px 1px 15px -8px #000
+			background: $base
+
+			h1
+				font-size: 1.8em
+				color: #fff
+
+
+		.box-partes
+			height: auto
+			display: flex
+
+			.box-left
+				width: 45%
+				background: #fff
+				display: inline-block
+				padding: 40px
+
+				.contenido
+					width: 100%
+					height: 100%
+
+					display: flex
+					justify-content: space-between
+
+					div
+						width: 100%
+						display: flex
+						flex-direction: column
+						align-items: center
+						hr 
+							width: 100%
+							margin: 20px 0
+
+						p
+							width: 100%
+							font-size: 1em
+							text-align: center
+
+						img
+							width: 85%
+							height: auto
+							margin: 50px 0
+							border: 1px solid $base
+							border-radius: 3px
+
+
+			.box-right
+				width: 55%
+				height: 100%
+				background: $black
+				display: inline-block
+				
+				ul
+					padding: 40px 60px
+					list-style-position: outside
+					p
+						text-align: initial
+
+					li
+						width: 100%
+						padding: 0 10px
+						color: #fff
+
+						h2
+							font-size: 1.5em
+							color: #82aef8
+
+						div
+							width: 100%
+							margin: 10px 0
+							display: inline-block
+
+							b
+								font-size: .9em
+								color: #82aef8
+
+							p
+								width: 80%
+								font-size: .85em
+								margin: 8px auto
+								text-align: center
+	
+img.img-faded
+	width: auto
+	display: inline-block
+	opacity: .4
+	position: absolute
+
+.box
+	width: 100%
+	height: auto
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+	.cuadro-info
+		width: 100%
+		height: auto
+		padding: 125px 0
+		background: #fff
+		color: $base
+		text-align: center
+		display: inline-block
+		font-family: "Bree serif"
+
+		h2
+			font-size: 1.9em
+
+		p
+			font-size: .9em
+			margin: 0 0 10px
+			padding: 0 25%
+			text-align: center
+			display: inline-block
+	
+	.caja-tarjetas
+		width: 100%
+		height: auto
+		padding: 130px 60px
+		background: $base
+
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		align-content: space-around
+		
+		.tarjeta-wrap
+			width: 30%
+			height: 250px
+			margin: 10px 15px
+			position: relative
+			overflow-y: hidden
+			box-shadow: 1px 1px 14px -2px #000
+
+			.adelante, .atras
+				width: 100%
+				height: 100%
+				background: #fff 	 	
+				border-radius: 3px
+				
+				position: absolute
+				top: 0
+
+				text-align: center
+
+
+h2.titulo-hr
+	width: 100%
+	font-size: 2.2em
+	color: inherit
+	text-align: center
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+
+
+	&::after,
+	&::before
+		content: " "
+		width: 20%
+		height: 3px
+		margin: 0 8%
+		border-radius: 4px
+		background: $base
+		display: inline-block
+
+
+
+.atras
+	padding: 10px 20px
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	align-items: center
+
+	font-size: .8em
+	font-family: "Bree serif"
+
+	.contenido
+		ol
+			list-style-position: inside
+			margin: 5px 0
+			text-align: left
+
+			li
+				margin: 2px 0
+
+		p
+			margin: 5px 0
+		
+
+.adelante
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	align-items: center
+	z-index: 3
+	font-size: .7em
+
+	h1	
+		width: 100%
+		padding: 5px 10px
+		font-size: 1.8em
+		color: #fff
+		background: rgba($base, .8)
+
+	&:hover
+		visibility: hidden
+		opacity: 0
+
+
+#celulas.adelante
+	background: url("img/otros/celulas.jpg")
+	background-size: 100% 100%
+
+#liderazgo.adelante
+	background: url("img/otros/liderazgo.jpg")
+	background-size: 100% 100%
+
+#adoracion.adelante
+	background: url("img/otros/musical.jpg")
+	background-size: 100% 100%
+
+#multimedia.adelante
+	background: url("img/otros/multimedia.jpg")
+	background-size: 100% 100%
+
+#eventos.adelante
+	background: url("img/otros/eventos.jpg")
+	background-size: 100% 100%
+
+#sedes.adelante
+	background: url("img/otros/sedes.jpg")
+	background-size: 100% 100%
+
+#radio.adelante
+	background: url("img/otros/radio.jpg")
+	background-size: 100% 100%
+
+#danza.adelante
+	background: url("img/otros/danzas.jpg")
+	background-size: 100% 100%
+	
+.cuadro-tarjeta .tarjeta > .atras .contenido p
+	font-size: 1.1em
+
+
+/* IV Parte - Footer */
+
+footer
+	width: 100%
+	height: auto
+	color: #a9a9a9
+	font-size: 1.05em
+	position: relative
+	font-family: Google sans
+
+	.box
+		width: 100%
+		height: auto
+		display: flex
+		justify-content: center
+		align-items: center
+
+	.box.redes
+		padding: 5% 0
+		background: #fff
+		color: $black
+
+		h2
+			font-size: 1.6em
+			color: $base
+
+		.items-redes
+			width: 50%
+			height: auto
+			margin: 25px 0
+			padding: 20px 20px
+			background: #fff
+			font-size: 1.45em
+
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			align-items: center
+
+			a
+				margin: 10px 20px
+				background: $base
+				color: #fff
+				padding: 25px
+				border-radius: 50%
+				position: relative
+
+				display: flex
+				justify-content: center
+				align-items: center
+
+				span
+					position: absolute
+
+				&:hover
+					background: $black
+
+	.box.pos
+		width: auto
+		padding: 30px
+		background: $black
+		display: flex
+		justify-content: center
+		align-items: center
+
+		p
+			font-family: Google Sans
+
+@media screen and (max-width: 800px)
+	.box
+		.caja-tarjetas
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
+
+			.tarjeta-wrap
+				width: 85%
+		
+	.main .cuadro-descrip
+		.slider
+			li
+				h1
+					font-size: 1.7em
+
+				p
+					width: 100%
+					font-size: .8em
+
+				a
+					font-size: .8em
+
+	.navegador .logo
+		h1
+			font-size: 2.2em
+
+		.menu
+			width: 95%
+
+			> li 
+				padding: 8px 20px
+
+				.sub-menu
+					font-size: .8em
+
+			a
+				font-size: .85em
+
+				
+
+
+	article.contenido .box-description 
+		.box-partes
+			flex-direction: column
+
+			.box-left 
+				width: 100%
+				.contenido div 
+					p
+						font-size: .8em
+
+					img
+						width: 70%
+
+			.box-right
+				width: 100%
+
+
+	footer .box.pos p
+		font-size: 0.9em

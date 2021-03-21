@@ -655,7 +655,7 @@ img.img-faded {
 }
 .box.livestream .cuadro-info {
   padding: 50px 0;
-  background: radial-gradient(#333, #111 70%);
+  background: #111;
   color: #eee;
 }
 .box.livestream .cuadro-info h2 {

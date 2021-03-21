@@ -717,10 +717,7 @@ img.img-faded{
 	&.livestream{
 		.cuadro-info{
 			padding: 50px 0;
-			background: radial-gradient(
-				#333, 
-				#111 70%
-			);
+			background: #111;
 			color: #eee;
 
 			h2{
@@ -749,6 +746,8 @@ img.img-faded{
 				}
 			}	
 			iframe{
+				// width: 100%;
+
 				max-width: 90%;
 				min-width: none;
 			}

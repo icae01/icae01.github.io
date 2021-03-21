@@ -41,6 +41,10 @@ body::-webkit-scrollbar-thumb{
 	color: #fff;
 }
 
+h1,h2,h3,h4,h5,h6{
+	// font-weight: normal;
+}
+
 h1{
 	font-size: 2em;
 	color: $base;
@@ -708,6 +712,64 @@ img.img-faded{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+
+	&.livestream{
+		.cuadro-info{
+			padding: 50px 0;
+			background: radial-gradient(
+				#333, 
+				#111 70%
+			);
+			color: #eee;
+
+			h2{
+				margin-bottom: 10px;
+				line-height: 20px;
+
+				p{font-size: 0.7em; font-weight: normal; position: relative;
+					@keyframes recorded {
+						0%{background: #C80000;}
+						50%{background: transparent;}
+						100%{background: #C80000;}
+					}
+					
+					&::after{
+						content: "";
+						width: 10px;
+						height: 10px;
+						margin-left: 5px;
+						position: absolute;
+						top: 7px;
+						// background: #C80000;
+						border-radius: 50%;
+						display: inline-block;
+						animation: recorded 3s infinite linear;
+					}
+				}
+			}	
+			iframe{
+				max-width: 90%;
+				min-width: none;
+			}
+
+			a{
+				width: 100%;
+				text-decoration: none;
+				font-size: 0.9em;
+				color: #555;
+				padding: 10px 0;
+				margin-bottom: 20px;
+				background: #aaa;
+				text-align: center;
+				&:hover{
+					color: #aaa;
+					background: #555;
+				}
+				&::before{content: ">> ";}
+			}
+		}	
+	}
 
 	.cuadro-info{
 		width: 100%;
@@ -716,11 +778,39 @@ img.img-faded{
 		background: $white;
 		color: $base;
 		text-align: center;
-		display: inline-block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 		font-family: "Bree serif";
 
 		h2{
 			font-size: 1.9em;
+
+			&.titulo-hr{
+				width: 100%;
+				font-size: 2.2em;
+				color: inherit;
+				font-weight: normal;
+				line-height: 30px;
+				margin-bottom: 10px;
+				text-align: center;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+			
+				&::after,
+				&::before{
+					content: " ";
+					width: 20%;
+					height: 3px;
+					margin: 0 8%;
+					border-radius: 4px;
+					background: $base;
+					display: inline-block;
+				}
+			}
 		}
 
 		p{
@@ -820,27 +910,7 @@ img.img-faded{
 	}
 }
 
-h2.titulo-hr{
-	width: 100%;
-	font-size: 2.2em;
-	color: inherit;
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 
-	&::after,
-	&::before{
-		content: " ";
-		width: 20%;
-		height: 3px;
-		margin: 0 8%;
-		border-radius: 4px;
-		background: $base;
-		display: inline-block;
-	}
-}
 
 #celulas.adelante{
 	background: url("img/otros/celulas.jpg");

@@ -651,6 +651,64 @@ img.img-faded {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.box.livestream .cuadro-info {
+  padding: 50px 0;
+  background: radial-gradient(#333, #111 70%);
+  color: #eee;
+}
+.box.livestream .cuadro-info h2 {
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.box.livestream .cuadro-info h2 p {
+  font-size: 0.7em;
+  font-weight: normal;
+  position: relative;
+}
+@keyframes recorded {
+  0% {
+    background: #C80000;
+  }
+  50% {
+    background: transparent;
+  }
+  100% {
+    background: #C80000;
+  }
+}
+.box.livestream .cuadro-info h2 p::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  position: absolute;
+  top: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: recorded 3s infinite linear;
+}
+.box.livestream .cuadro-info iframe {
+  max-width: 90%;
+  min-width: none;
+}
+.box.livestream .cuadro-info a {
+  width: 100%;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #555;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background: #aaa;
+  text-align: center;
+}
+.box.livestream .cuadro-info a:hover {
+  color: #aaa;
+  background: #555;
+}
+.box.livestream .cuadro-info a::before {
+  content: ">> ";
 }
 .box .cuadro-info {
   width: 100%;
@@ -659,11 +717,36 @@ img.img-faded {
   background: #F3F3F3;
   color: #094268;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: "Bree serif";
 }
 .box .cuadro-info h2 {
   font-size: 1.9em;
+}
+.box .cuadro-info h2.titulo-hr {
+  width: 100%;
+  font-size: 2.2em;
+  color: inherit;
+  font-weight: normal;
+  line-height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.box .cuadro-info h2.titulo-hr::after, .box .cuadro-info h2.titulo-hr::before {
+  content: " ";
+  width: 20%;
+  height: 3px;
+  margin: 0 8%;
+  border-radius: 4px;
+  background: #094268;
+  display: inline-block;
 }
 .box .cuadro-info p {
   font-size: 0.9em;
@@ -741,26 +824,6 @@ img.img-faded {
 .box .caja-tarjetas .tarjeta-wrap .tarjeta:hover > .adelante {
   opacity: 0;
   visibility: hidden;
-}
-
-h2.titulo-hr {
-  width: 100%;
-  font-size: 2.2em;
-  color: inherit;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-h2.titulo-hr::after, h2.titulo-hr::before {
-  content: " ";
-  width: 20%;
-  height: 3px;
-  margin: 0 8%;
-  border-radius: 4px;
-  background: #094268;
-  display: inline-block;
 }
 
 #celulas.adelante {

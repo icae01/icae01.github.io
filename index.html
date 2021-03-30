@@ -7,7 +7,6 @@
 	<title>Inicio | I.C.A.E</title>
 
 	<!-- Estilos -->
-	<link rel="stylesheet" href="css/parts/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="iconos-css/font-awesome-edit.css">
 	<link rel="shortcut icon" type="image/x-icon" href="css/img/icae.png">
@@ -15,6 +14,7 @@
 	<!-- Scripts -->
 	<script src="jquery/jquery.js"></script>
 	<script src="js/animations.js"></script>
+	<script src="js/v-slider.js"></script>
 	<script src="js/java.js"></script>
 </head>
 <body>
@@ -110,15 +110,27 @@
 			<img src="css/img/icae.png" class="img-faded" alt="">
 		</div>
 
-		<div class="box livestream">
-			<div class="cuadro-info">
-				<h2>Servicio Dominical <p>En Vivo (Facebook Live)</p></h2>
-				
-				<!-- <a href="">Ir al enlace de la Publicacion</a> -->
-				<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fantorcha.encendida.9%2Fvideos%2F1967294546744302%2F&show_text=true&width=560" width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+		<section class="flex-fila">
+			<div class="box livestream">
+				<div class="cuadro-info">
+					<h2>Servicio Dominical <p>En Vivo (Facebook Live)</p></h2>
+					
+					<!-- <a href="">Ir al enlace de la Publicacion</a> -->
+					<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fantorcha.encendida.9%2Fvideos%2F1967294546744302%2F&show_text=true&width=560" width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+					<!-- <div class="simula"></div> -->
+				</div>
 			</div>
-		</div>
-
+			<div class="box versiculos">
+				<div class="cuadro-info">
+					<h2>Actualidad</h2>
+				</div>
+				<div class="cuadro-slider">
+					<ul class="v-slider">
+					</ul>
+				</div>
+			</div>
+		</section>
+		
 		<div class="box servicios" id="servicios">
 			<section class="cuadro-info">
 				<h2 class="titulo-hr">Sedes</h2>

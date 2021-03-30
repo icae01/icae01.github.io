@@ -4,6 +4,9 @@
 /* Mixins */
 @import "parts/mixins";
 
+// Fuentes
+@import "parts/fonts";
+
 *{
 	margin: 0;
 	padding: 0;
@@ -33,11 +36,10 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar-thumb{
     background: darken($base, 10);
-    // border-radius: 4px;
 }
 
 *::selection{
-	background: rgba(9, 67, 104, 0.8);
+	background: $base;
 	color: #fff;
 }
 
@@ -79,9 +81,8 @@ hr{
 	top: 0;
 	clear: both;
 
-	display: flex;
+	@include display_mx();
 	flex-flow: row wrap;
-	justify-content: center;
 
 	.logo{
 		width: 100%;
@@ -94,10 +95,9 @@ hr{
 		
 		box-shadow: 1px 1px 15px -8px #000;
 
-		display: flex;
+		@include display_mx();
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+
 
 		&:hover > .menu{
 			opacity: 1;
@@ -107,6 +107,7 @@ hr{
 
 		h1{
 			font-size: 2em;
+			font-weight: 900;
 		}
 
 		.menu{
@@ -117,16 +118,16 @@ hr{
 			border-bottom-left-radius: 3px;
 			position: absolute;
 			top: 100%;
-			display: flex;
+			@include display_mx();
 			flex-direction: row;
 			flex-wrap: nowrap;
-			justify-content: space-around;
 			opacity: 0;
 			z-index: -1;
 			visibility: hidden;
 
 			> li{
 				width: 100%;
+				height: 100%;
 				padding: 12px;
 				border: 1px solid rgba($base, 0.1);
 				border-top: none;
@@ -136,9 +137,8 @@ hr{
 				font-size: 1.08em;
 				text-align: center;
 				
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				@include display_mx();
+
 
 				&:hover{
 					background: darken($base-md-lg, 5%);
@@ -221,10 +221,9 @@ hr{
 	background-position: center;
 	background-attachment: fixed;
 
-	display: flex;
+	@include display_mx();
 	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
+
 
 	.cuadro-descrip{
 		width: 100%;
@@ -239,10 +238,9 @@ hr{
 			font-size: .85em;
 			position: relative;
 
-			display: flex;
+			@include display_mx();
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+
 
 			h1{
 				color: #fff;
@@ -265,18 +263,16 @@ hr{
 			list-style: none;
 			position: relative;
 
-			display: flex;
+			@include display_mx();
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+
 
 			>li{
 				width: 80%;
 				padding: 15px;
-				display: flex;
+				@include display_mx();
 				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+
 
 				h1{
 					color: #fff;
@@ -311,9 +307,8 @@ hr{
 				position: absolute	;
 				top: 0;
 				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				@include display_mx();
+
 				font-size: 1em;
 				color: #fff;
 				z-index: 100;
@@ -335,9 +330,8 @@ hr{
 				padding: 15px;
 				border-radius: 3px;
 
-				display: flex;
+				@include display_mx();
 				flex-direction: row;
-				justify-content: center;
 				list-style: none;
 
 				span{
@@ -362,10 +356,9 @@ hr{
 			position: relative;
 			color: #fff;
 
-			display: flex;
+			@include display_mx();
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+
 
 			h1{
 				font-size: 1.9em;
@@ -409,9 +402,8 @@ hr{
 	background: $base;
 	border-radius: 50%;
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include display_mx();
+
 
 	span{
 		position: absolute;
@@ -432,10 +424,9 @@ article.contenido{
 		background: linear-gradient($base 50%, $base-dk);
 
 		position: relative;
-		display: flex;
+		@include display_mx();
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+
 
 		img{
 			width: auto;
@@ -447,10 +438,9 @@ article.contenido{
 		width: 100%;
 		padding: 30px 0;
 
-		display: flex;
+		@include display_mx();
 		flex-wrap: wrap;
-		justify-content: space-around;
-		align-items: center;			
+
 		
 		.box-wrap{
 			width: 40%;
@@ -458,9 +448,9 @@ article.contenido{
 			background: $white;
 			border-radius: 3px;
 
-			display: flex;
+			@include display_mx();
 			flex-direction: column;	
-			align-items: center;
+
 			
 			img{
 				width: 65%;
@@ -481,10 +471,9 @@ article.contenido{
 				padding: 10% 30px 15%;
 				box-shadow: 1px 1px 15px -8px #000;
 				background: linear-gradient($base 80%, $base-dk 20%);
-				display: flex;
+				@include display_mx();
 				font-size: 2em;
-				justify-content: center;
-				align-items: center;
+
 	
 				h1{
 					font-size: 90%;
@@ -495,10 +484,9 @@ article.contenido{
 			div.contenedor{
 				width: 100%;
 				margin: 10px 0;
-				display: flex;
+				@include display_mx();
 				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+
 
 				>div{
 					margin: 20px 0; 
@@ -534,9 +522,8 @@ article.contenido{
 							background: $base-dk;
 							border-radius: 3px;
 
-							display: flex; 
-							justify-content: space-around;
-							align-items: center;
+							@include display_mx() ;
+
 
 							li{
 								padding: 5px 10px;
@@ -567,10 +554,9 @@ article.contenido{
 					width: 35%;
 					height: 100%;
 					
-					display: flex;
+					@include display_mx();
 					flex-direction: column;					
-					justify-content: center;
-					align-items: center;
+
 				}
 				
 				.box-calendar{
@@ -632,17 +618,15 @@ article.contenido{
 						background: $EVN-blue-dk;
 						color: #fff;
 
-						display: flex;
+						@include display_mx();
 						flex-direction: row;
-						justify-content: space-around;
-						align-items: center;
+
 
 						li{
 							width: (100/7) * 1%;
 							height: 100%;
-							display: flex;
-							justify-content: space-around;
-							align-items: center;
+							@include display_mx();
+
 						}
 					}
 
@@ -651,17 +635,16 @@ article.contenido{
 						height: 80%;
 						background: #fff;
 	
-						display: flex;
+						@include display_mx();
 						flex-direction: row;
-						justify-content: center;
-						align-items: center;
+
 	
 	
 						.column{
 							width: 100%;
 							height: 100%;
 	
-							display: flex;
+							@include display_mx();
 							flex-direction: column;
 							flex-wrap: nowrap;
 	
@@ -697,6 +680,275 @@ article.contenido{
 			}
 		}
 	}
+
+	.flex-fila{
+		width: 100%;
+		height: 600px;
+		@include display_mx();
+		align-items: flex-start;
+
+		>div{
+			height: 100%;
+		}
+	}
+
+	.box{
+		width: 100%;
+		height: 100%;
+		@include display_mx();
+		flex-direction: column;
+
+		&.livestream{
+			.cuadro-info{
+				padding: 100px 0;
+				background: #111;
+				color: #eee;
+				
+				.simula{
+					width: 90%;
+					height: 230px;
+					
+					background: #fff;
+				}
+
+				h2{
+					margin-bottom: 10px;
+					line-height: 20px;
+
+					p{font-size: 0.7em; font-weight: normal; position: relative;
+						@keyframes recorded {
+							0%{background: #C80000;}
+							50%{background: transparent;}
+							100%{background: #C80000;}
+						}
+						
+						&::after{
+							content: "";
+							width: 10px;
+							height: 10px;
+							margin-left: 5px;
+							position: absolute;
+							top: 7px;
+							// background: #C80000;
+							border-radius: 50%;
+							display: inline-block;
+							animation: recorded 3s infinite linear;
+						}
+					}
+				}	
+				iframe{
+					// width: 100%;
+
+					max-width: 90%;
+					min-width: none;
+				}
+
+				a{
+					width: 100%;
+					text-decoration: none;
+					font-size: 0.9em;
+					color: #555;
+					padding: 10px 0;
+					margin-bottom: 20px;
+					background: #aaa;
+					text-align: center;
+					&:hover{
+						color: #aaa;
+						background: #555;
+					}
+					&::before{content: ">> ";}
+				}
+			}	
+		}
+
+		&.versiculos{
+			height: 100%;
+			justify-content: flex-start;
+
+			.cuadro-info{
+				padding: 70px 0;
+				height: auto;
+			}
+
+			.cuadro-slider{
+				width: 100%;
+				height: 100%;
+				// margin: 30px 0;
+				background: $white;
+				@include display_mx();
+			}
+
+			.v-slider{
+				width: 80%;
+				height: 60%;
+				@include display_mx();
+				flex-direction: column;
+
+				div, li{
+					font-family: "Bree Serif";
+					font-size: .9em;
+					border-radius: 3px;
+				}
+
+				li{
+					$color1: $base;
+					$color2: #eee;
+
+					width: 100%;
+					height: 100%;
+					padding: 10px 10%;
+					color: #333;
+					box-shadow: 0 4px 11px -5px $base-dk;
+					position: relative;
+					background: $color2;
+					@include display_mx();
+
+					.cita{
+						border-top-left-radius: 0;
+						border-top-right-radius: 0;
+						padding: 5px 10px;
+						position: absolute;
+						top: 95%;
+						color: $color2;
+						background: $color1;
+					}
+				}
+			}
+		}
+
+		.cuadro-info{
+			width: 100%;
+			height: 100%;
+			padding: 125px 0;
+			background: $white;
+			color: $base;
+			text-align: center;
+			@include display_mx();
+			
+			flex-direction: column;
+			font-family: "Bree serif";
+
+			h2{
+				font-size: 1.9em;
+
+				&.titulo-hr{
+					width: 100%;
+					font-size: 2.2em;
+					color: inherit;
+					font-weight: normal;
+					line-height: 30px;
+					margin-bottom: 10px;
+					text-align: center;
+					@include display_mx();
+					flex-direction: row;
+					
+				
+					&::after,
+					&::before{
+						content: " ";
+						width: 20%;
+						height: 3px;
+						margin: 0 8%;
+						border-radius: 4px;
+						background: $base;
+						display: inline-block;
+					}
+				}
+			}
+
+			p{
+				font-size: .9em;
+				margin: 0 0 10px;
+				padding: 0 25%;
+				text-align: center;
+				display: inline-block;
+			}
+		}
+		
+		.caja-tarjetas{
+			width: 100%;
+			height: auto;
+			padding: 130px 60px;
+			background: $base;
+
+			@include display_mx();
+			flex-wrap: wrap;
+			align-content: space-around;
+			position: relative;
+
+			>.tarjeta-wrap{
+					position: absolute;
+			}
+			
+			.tarjeta-wrap{
+				width: 400px;
+				height: 250px;
+				margin: 10px 15px;
+				position: relative;
+				overflow-y: hidden;
+				box-shadow: 1px 1px 14px -2px #000;
+
+				.tarjeta{
+					.adelante, .atras{
+						width: 100%;
+						height: 100%;
+						background: $white;
+						border-radius: 3px;
+						position: absolute;
+						top: 0;
+
+						text-align: center;
+					}
+					
+					.atras{
+						padding: 10px 20px;
+						@include display_mx();
+						flex-flow: row wrap;
+						
+
+						font-size: .8em;
+						font-family: "Bree serif";
+
+						.contenido{
+							p{
+								margin: 5px 0;
+								&.p-title{
+									font-size: 1.15em;
+								}
+							}
+
+							ol{
+								margin: 10px 0;
+								padding: 0 20px;
+								text-align: left;
+							}
+						}
+					}
+						
+					.adelante{
+						@include display_mx();
+						flex-flow: row wrap;
+						
+						z-index: 3;
+						font-size: .7em;
+
+						h1{	
+							width: 100%;
+							padding: 5px 10px;
+							font-size: 1.8em;
+							color: #fff;
+							background: rgba($base, .8);
+						}
+					}
+
+					&:hover > .adelante{
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+		}
+	}
 }
 	
 img.img-faded{
@@ -706,208 +958,6 @@ img.img-faded{
 	position: absolute;
 }
 
-.box{
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	&.livestream{
-		.cuadro-info{
-			padding: 50px 0;
-			background: #111;
-			color: #eee;
-
-			h2{
-				margin-bottom: 10px;
-				line-height: 20px;
-
-				p{font-size: 0.7em; font-weight: normal; position: relative;
-					@keyframes recorded {
-						0%{background: #C80000;}
-						50%{background: transparent;}
-						100%{background: #C80000;}
-					}
-					
-					&::after{
-						content: "";
-						width: 10px;
-						height: 10px;
-						margin-left: 5px;
-						position: absolute;
-						top: 7px;
-						// background: #C80000;
-						border-radius: 50%;
-						display: inline-block;
-						animation: recorded 3s infinite linear;
-					}
-				}
-			}	
-			iframe{
-				// width: 100%;
-
-				max-width: 90%;
-				min-width: none;
-			}
-
-			a{
-				width: 100%;
-				text-decoration: none;
-				font-size: 0.9em;
-				color: #555;
-				padding: 10px 0;
-				margin-bottom: 20px;
-				background: #aaa;
-				text-align: center;
-				&:hover{
-					color: #aaa;
-					background: #555;
-				}
-				&::before{content: ">> ";}
-			}
-		}	
-	}
-
-	.cuadro-info{
-		width: 100%;
-		height: auto;
-		padding: 125px 0;
-		background: $white;
-		color: $base;
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		font-family: "Bree serif";
-
-		h2{
-			font-size: 1.9em;
-
-			&.titulo-hr{
-				width: 100%;
-				font-size: 2.2em;
-				color: inherit;
-				font-weight: normal;
-				line-height: 30px;
-				margin-bottom: 10px;
-				text-align: center;
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				justify-content: center;
-			
-				&::after,
-				&::before{
-					content: " ";
-					width: 20%;
-					height: 3px;
-					margin: 0 8%;
-					border-radius: 4px;
-					background: $base;
-					display: inline-block;
-				}
-			}
-		}
-
-		p{
-			font-size: .9em;
-			margin: 0 0 10px;
-			padding: 0 25%;
-			text-align: center;
-			display: inline-block;
-		}
-	}
-	
-	.caja-tarjetas{
-		width: 100%;
-		height: auto;
-		padding: 130px 60px;
-		background: $base;
-
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		align-content: space-around;
-		position: relative;
-
-		>.tarjeta-wrap{
-				position: absolute;
-		}
-		
-		.tarjeta-wrap{
-			width: 400px;
-			height: 250px;
-			margin: 10px 15px;
-			position: relative;
-			overflow-y: hidden;
-			box-shadow: 1px 1px 14px -2px #000;
-
-			.tarjeta{
-				.adelante, .atras{
-					width: 100%;
-					height: 100%;
-					background: $white;
-					border-radius: 3px;
-					position: absolute;
-					top: 0;
-
-					text-align: center;
-				}
-				
-				.atras{
-					padding: 10px 20px;
-					display: flex;
-					flex-flow: row wrap;
-					justify-content: center;
-					align-items: center;
-
-					font-size: .8em;
-					font-family: "Bree serif";
-
-					.contenido{
-						p{
-							margin: 5px 0;
-							&.p-title{
-								font-size: 1.15em;
-							}
-						}
-
-						ol{
-							margin: 10px 0;
-							padding: 0 20px;
-							text-align: left;
-						}
-					}
-				}
-					
-				.adelante{
-					display: flex;
-					flex-flow: row wrap;
-					justify-content: center;
-					align-items: center;
-					z-index: 3;
-					font-size: .7em;
-
-					h1{	
-						width: 100%;
-						padding: 5px 10px;
-						font-size: 1.8em;
-						color: #fff;
-						background: rgba($base, .8);
-					}
-				}
-
-				&:hover > .adelante{
-					opacity: 0;
-					visibility: hidden;
-				}
-			}
-		}
-	}
-}
 
 
 
@@ -977,9 +1027,8 @@ footer{
 	.box{
 		width: 100%;
 		height: auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include display_mx();
+		flex-direction: column;
 	}
 
 	.box.redes{
@@ -1000,10 +1049,9 @@ footer{
 			background: $white;
 			font-size: 1.45em;
 
-			display: flex;
+			@include display_mx();
 			flex-wrap: wrap;
-			justify-content: space-around;
-			align-items: center;
+
 
 			a{
 				margin: 10px 20px;
@@ -1013,9 +1061,8 @@ footer{
 				border-radius: 50%;
 				position: relative;
 
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				@include display_mx();
+
 
 				span{
 					position: absolute;
@@ -1033,9 +1080,8 @@ footer{
 		padding: 30px;
 		background: $black;
 		text-align: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include display_mx();
+
 
 		p{
 			font-family: Google Sans;

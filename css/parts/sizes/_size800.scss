@@ -8,8 +8,6 @@
 				width: 95%;
 
 				> li {
-					padding: 15px 20px;
-
 					.sub-menu{
 						font-size: .8em;
 
@@ -54,11 +52,20 @@
 	}
 
 
-	article.contenido .box-description{ 
-		.box-wrap{
+	article.contenido {
+		.flex-fila{
 			width: 100%;
+			height: 1200px;
+			flex-direction: column;
+		}
+		
+		.box-description{ 
+			.box-wrap{
+				width: 100%;
+			}
 		}
 	}
+
 
 	.box{
 		.caja-tarjetas{

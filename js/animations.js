@@ -7,7 +7,6 @@ $(document).ready(function () {
 			fondo = colores[num];
 
 		$(".cuadro#ind-"+i+"").css("background", fondo);
-		console.log(num);		
 	}
 
 	// ========================================================
